@@ -1,16 +1,24 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { FetchApiDataComponent } from './fetch-api-data/fetch-api-data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppointmentListComponent,
+    FetchApiDataComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule, 
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
